@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class = "upload">
+  <title>Audience Allocator: Upload</title>
+  <div class = "fileupload">
+    <div class = "uploadtext">
+      <h2>Upload</h2>
+    </div>
+  </div>
+  <div class = "scriptinfo">
+    <div class = "infotext">
+      <h2>Script Info</h2>
+      <h3>Script Type: </h3>
+      <div class = "playormusical">
+        <label class="pmchoice">Play
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="pmchoice">Musical
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class = "uploadsection">
+    <form method=post enctype=multipart/form-data>
+      <input type = file name = file>
+      <input type = submit value=Upload>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

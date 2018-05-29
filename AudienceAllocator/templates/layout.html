@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- REMEMBER TO REFRESH THE CSS VERSION (filename = 'css/main.css')}}?version=###")
+     EVERY TIME YOU UPDATE THE CSS OR ELSE THE UPDATED CSS WILL NOT SHOW -->
+
+<html>
+  <head>
+
+    <title>Audience Allocator</title>
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for ('static', filename = 'css/main.css')}}?version=1.27">
+
+
+  </head>
+  <body>
+    <div class = "header">
+      <a href = "{{url_for('home')}}" class = "logo">Audience Allocator</a>
+
+      <div class = "subheader">
+        <h3 class = "sublogo">Sponsored by Apples and Oranges Arts</h3>
+      </div>
+
+      <div class = "topnav">
+        <strong><nav>
+          <ul class = "menu">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('upload')}}">Upload</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </div>
+
+    <div class = "container">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

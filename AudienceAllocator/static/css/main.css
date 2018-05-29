@@ -1,0 +1,199 @@
+html{
+  height: 100%;
+}
+body {
+  background-color: linen;
+  font-family: "Helvetica Neue", Helvetica, Arial sans-serif;
+  margin: 0;
+  min-height: 100%;
+
+}
+
+/*
+Header Formatting
+ */
+
+.header {
+  background-color: #000;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+/* Logo and sublogo formatting */
+.logo{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sublogo{
+  color: white;
+}
+
+h3.sublogo {
+  font-size: 1em;
+}
+
+/* Navigation Menu Formatting */
+ul{
+  list-style-type: none;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a{
+  border-radius: 4px;
+  color: white;
+  float: left;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  background-color: #919191;
+  color: #414141;
+}
+
+.menu li a.active{
+  color: #fff;
+  background-color: #414141;
+}
+
+/* Individual Page Formatting Starts here */
+
+/* Home Page */
+.home{
+  padding-left: 20px;
+}
+
+/* Upload Page */
+
+
+.upload{
+  overflow: auto;
+  width: 100%;
+}
+
+/*  Upload page upload section
+    *** NOT FORMATTED CORRECTLY ***
+ */
+.fileupload{
+  background-color: #f89534;
+  float: left;
+  width: 65%;
+}
+
+.uploadsection{
+  background-color: #444;
+  float: left;
+  margin: auto;
+  width: 65%;
+
+
+}
+.uploadtext{
+  padding-left: 20px;
+}
+
+/* Upload Page Script info section
+  *** NOT FORMATTED CORRECTLY ***
+*/
+
+.scriptinfo{
+  background-color: #aacc49;
+  float: right;
+  width: 35%;
+
+}
+
+/* Radio buttons for user to check if the script is for a play or Musical
+  ***CURRENTLY NOT WORKING CORRECTLY***
+ */
+.playormusical {
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 12px;
+  padding-left: 35px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.playormusical input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.pmchoice:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.pmchoice input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.pmchoice input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.pmchoice .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+.infotext{
+  padding-left: 20px;
+}
+
+
+/* Makes page responsive */
+@media screen and (max-width: 500px){
+  .menu li a{
+    display: block;
+    float: none;
+    text-align: left;
+  }
+  .topnav{
+    float: none;
+  }
+}
